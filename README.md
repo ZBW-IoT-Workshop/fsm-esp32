@@ -50,11 +50,11 @@ Portiere deine Lösungen von [Auftrag LED-Board Simulator](https://github.com/IT
 
 Folgende Tutorials können dir dabei helfen:
 
-  - [Variables and Types](https://www.learn-c.org/de/Variables%20and%20Types)
+  - [Variables and Types](https://www.learn-c.org/de/Variablen_und_Typen)
   - [Arrays](https://www.learn-c.org/de/Arrays)
   - [Strings](https://www.learn-c.org/de/Strings)
-  - [Functions](https://www.learn-c.org/de/Functions)
-  - [For loops](https://www.learn-c.org/de/Functions) & [While loops](https://www.learn-c.org/de/While%20loops)
+  - [Functions](https://www.learn-c.org/de/Funktionen)
+  - [For loops](https://www.learn-c.org/de/For_Schleifen) & [While loops](https://www.learn-c.org/de/While_Schleifen)
 
 ### 3. Aufgabe
 
