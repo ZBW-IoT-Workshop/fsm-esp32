@@ -48,12 +48,12 @@ void renderComplexAnimationWithLed0RgbOff(Frame *frame, uint32_t animationFrame)
 {
     renderComplexAnimation(frame, animationFrame);
 
-    frame->pixels[0] = rgbOffCycle[(animationFrame / 5) % 4];
+    frame->pixels[0] = rgbOffCycle[(animationFrame / 5) % ARRAY_LENGTH(rgbOffCycle)];
 }
 
 void renderComplexAnimationWithLed0Rainbow(Frame *frame, uint32_t animationFrame)
 {
     renderComplexAnimation(frame, animationFrame);
 
-    frame->pixels[0] = ledRainbow[(animationFrame / 5) % LED_COUNT];
+    frame->pixels[0] = ledRainbow[(animationFrame / 5) % ARRAY_LENGTH(ledRainbow)];
 }

@@ -11,5 +11,5 @@ void renderKnightRider(Frame *frame, uint32_t animationFrame)
         position = ((LED_COUNT * 2) - 2) - position;
     }
 
-    frame->pixels[position] = {255, 0, 0};
+    frame->pixels[position] = LED_RED;
 }
