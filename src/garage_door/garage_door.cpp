@@ -73,7 +73,6 @@ static bool stateClosing(FSM &fsm, FSM::Reason reason, void *context)
     return true;
 }
 
-
 static void button_wait_for_press(QwiicButton *const button)
 {
     button->clearEventBits();
