@@ -1,65 +1,46 @@
-# LED-Board ESP32
+# LED-Board FSM
 
-Boilerplate Code, um den [SparkFun LED 10x Output (Qwiic)](https://www.sparkfun.com/sparkfun-qwiic-led-stick-apa102c.html) anzusteuern.
+Boilerplate Code, um den [SparkFun LED 10x Output (Qwiic)](https://www.sparkfun.com/sparkfun-qwiic-led-stick-apa102c.html) und 1 x [SparkFun Button (Qwiic)](https://www.sparkfun.com/sparkfun-qwiic-button-red-led.html) anzusteuern, mit FSM lib.
 
 ## Aufgaben
 
 ### 1. Aufgabe
 
-1. Installiere die Entwicklungsumgebung:
-    - [Visual Studio Code](https://code.visualstudio.com)
-    - [PlatformIO](https://platformio.org)
-
-2. Arbeite die ersten 3 Punkte des von [Get started with Arduino and ESP32-DevKitC: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html) durch
-
-3. Clone dieses Repo
+1. Clone dieses Repo
 
 ```
 cd my-favourite-dir
-git clone https://github.com/IT-B-23H-27H/led-board-esp32.git
+git clone https://github.com/IT-A-23H-27H/fsm-esp32.git
 ```
 
-4. Erstelle einen Branch mit deinem Namen von diesem Repo
+4. Checke deinen Branch aus
 
 ```
-cd led-board-esp32
-git branch my-name
-```
-
-5. Checke deinen Branch aus
-
-```
+cd fsm-esp32
 git checkout my-name
 ```
 
-6. Pushe deinen Branch
-
-```
-git push origin my-name
-```
-
-7. Öffne das Projekt mit Visual Studio Code
+5. Öffne das Projekt mit Visual Studio Code
 
 ```
 code .
 ```
 
-### 2. Aufgabe
+## 2. Aufgabe
 
-Portiere deine Lösungen von [Auftrag LED-Board Simulator](https://github.com/IT-B-23H-27H/led-board-simulator) in die Programmiersprache C
+Dieses Beispiel schaltet die Farben Rot Grün und Blau auf den mit 2s Periodendauer durch. Bei Blau bleibt der Zyklus stehen bis erneut eine Taste gedrückt wurde. Ändern Sie das Programm so ab, dass bei Tastendruck die Farbe weitergeschaltet wird, ohne die 2s abzuwarten.
 
-Folgende Tutorials können dir dabei helfen:
+## 3. Aufgabe
 
-  - [Variables and Types](https://www.learn-c.org/de/Variablen_und_Typen)
-  - [Arrays](https://www.learn-c.org/de/Arrays)
-  - [Strings](https://www.learn-c.org/de/Strings)
-  - [Functions](https://www.learn-c.org/de/Funktionen)
-  - [For loops](https://www.learn-c.org/de/For_Schleifen) & [While loops](https://www.learn-c.org/de/While_Schleifen)
+Implementiere das Beispiel als State Machine.
 
-### 3. Aufgabe
+## 4. Aufgabe
 
-Herzlchen Glückwunsch! Du bist soeben zum _Navigator_ befördert worden. Setzt dich zu jemanden der noch an den übrigen Aufgaben ist und betreibe [Pair Programming](https://en.wikipedia.org/wiki/Pair_programming)
-
-## Weiterführendes
-
-Erarbeite die Punkte `Writing Unit Tests` und `Adding Bluetooth LE features` aus [Get started with Arduino and ESP32-DevKitC: debugging and unit testing](https://docs.platformio.org/en/latest/tutorials/espressif32/arduino_debugging_unit_testing.html) selbstständig.
+Modellieren Sie einen Zustandsautomaten für eine Garagentorsteuerung, welche sich wie folgt verhält:
+- Zu beginn ist nicht bekannt, ob das Tor offen oder geschlossen oder in einem Zwischenzustand steht.
+- Wird die Taste in unbekanntem Zustand gedrückt, so fährt das Tor in die geschlossene Position
+- Wird die Taste im geschlossenen Zustand gedrückt, fährt das Tor auf
+- Wird die Taste im offenen Zustand gedrückt, fährt das Tor zu
+- Wird die Taste während der Bewegung gedrückt, stoppt das Tor
+- Wird eine Taste im gestoppten Zustand gedrückt, fährt das Tor in die Gegenrichtung weiter
+- «Offen» und «Geschlossen» wird durch sog. Endschalter erkannt.
