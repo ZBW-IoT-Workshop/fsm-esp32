@@ -12,5 +12,5 @@ void renderBgr(Frame *frame, uint32_t animationFrame)
 {
     LedColor color = sequence[animationFrame % ARRAY_LENGTH(sequence)];
 
-    fillFrame(frame, color, 500);
+    fillFrame(frame, color, 2000);
 }
