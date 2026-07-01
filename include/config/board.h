@@ -1,0 +1,9 @@
+#ifndef CONFIG_BOARD_H
+#define CONFIG_BOARD_H
+
+#define LED_COUNT (10)
+#define MAX_FRAME_COUNT (20)
+#define ANIMATION_SWITCH_THRESHOLD (20)
+#define DEFAULT_FRAME_DURATION_MS (250)
+
+#endif /* CONFIG_BOARD_H */
