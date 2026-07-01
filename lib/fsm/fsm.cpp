@@ -13,7 +13,7 @@ FSM::FSM(const State *const states, size_t stateCount, StateId initial, void *co
     {
         logPrefix();
         Serial.print("Initial state ");
-        Serial.println(getCurrentStateName());s
+        Serial.println(getCurrentStateName());
         call(currentState_, Reason::Enter);
     }
 }
